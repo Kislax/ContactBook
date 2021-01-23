@@ -1,0 +1,13 @@
+@import "~bootstrap";
+@import "~bootstrap/scss/bootstrap";
+@import "Variables";
+
+.active{
+  background: $accent-color;
+}
+.list-group-item.active{
+  background: $accent-color;
+  border-color: $accent-color;
+}
+
+
