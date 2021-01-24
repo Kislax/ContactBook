@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "login": "user",
+      "name": "Maxim",
+      "password": "hash",
+      "firstEntry": true,
+      "theme": "black"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "owner": 1,
+      "name": "user1",
+      "lastname": "user1",
+      "phone1": 8332211234,
+      "phone2": 8332211234,
+      "email1": "sobaka@lol.com"
+    },
+    {
+      "id": 2,
+      "owner": 1,
+      "name": "user2",
+      "lastname": "user2",
+      "phone1": 833221122134,
+      "phone2": 833221133234,
+      "email1": "sobaka2@lol.com"
+    }
+  ]
+}

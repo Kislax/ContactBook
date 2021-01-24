@@ -1,13 +1,27 @@
 import './App.scss';
-import {ContactPage} from "./Containers/ContactPage/ContactPage";
-import {Navbar} from "./Components/Navbar/Navbar";
+import {useAuth} from "./hooks/auth.hook";
+import {useRoutes} from "./Containers/Router/Router";
+import {Context} from "./Context/Context";
+import {Loader} from "./Components/Loader/Loader";
 
 
 export  const App= ()=> {
+
+    const {token, login, logout, userId, userName, ready} = useAuth()
+    const isAuthenticated = !!userName
+    const routes = useRoutes(isAuthenticated)
+
+    if (!ready) {
+        return <Loader />
+    }
+
   return (
     <div className="App">
-        <Navbar/>
-      <ContactPage/>
+        <Context.Provider value={{
+            token, login, logout, userId, isAuthenticated
+        }}>
+            {routes}
+        </Context.Provider>
     </div>
   );
 }

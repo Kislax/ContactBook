@@ -9,9 +9,9 @@ export const useAuth = () => {
     const [userId, setUserId] = useState(null)
     const [userName, setUserName] = useState(null)
 
-    const login = useCallback((id, name) => {
+    const login = useCallback((id, userName) => {
         setUserId(id)
-        setUserName(name)
+        setUserName(userName)
         localStorage.setItem(storageName, JSON.stringify({
             userId: id,
             userName: name
@@ -36,8 +36,7 @@ export const useAuth = () => {
     }, [login])
 
 
-    return { login, logout, userId, ready }
+    return { login, logout, userId, userName, ready}
 }
 
 
-const hashedPassword = await bcrypt.hash(password, 12)

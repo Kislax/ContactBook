@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##JSON
+used port 3004
+
+### `npm run JSON`
 
 ## Scripts
 

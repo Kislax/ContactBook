@@ -8,7 +8,7 @@
   "profile": { "name": "typicode" },
 
 
-  "users": [{"id" : 1, "name": "user1", "password": "hash", "firstEntry": true,
+  "users": [{"id" : 1, "username": "Maxim", "password": "hash", "firstEntry": true,
     "theme": "black"}],
 
 
